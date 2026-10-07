@@ -1,0 +1,28 @@
+# Angry Birds Slingshot Controller — .gitignore
+
+# ─── OS Files ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ─── Arduino IDE ──────────────────────────────────────────────
+*.bak
+*.tmp
+build/
+.arduino15/
+
+# ─── Windows ──────────────────────────────────────────────────
+$RECYCLE.BIN/
+*.lnk
+
+# ─── Editors ──────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+.idea/
+*.swp
+*~
+
+# ─── Scratch / Temporary ─────────────────────────────────────
+scratch/
+*.log
