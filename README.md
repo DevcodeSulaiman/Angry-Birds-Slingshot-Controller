@@ -251,7 +251,7 @@ Mouse.release(MOUSE_LEFT);            // Release
 
 | Name | Roll No. |
 |------|----------|
-| @Drakren | UE234036 |
+| [@Drakren](https://github.com) | UE234036 |
 | Md Sulaiman Qamar | UE234035 |
 | Utkarsh Sharma | UE234070 |
 | Anuj Gupta | UE234010 |
