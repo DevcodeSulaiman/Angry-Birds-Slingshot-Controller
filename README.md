@@ -251,7 +251,7 @@ Mouse.release(MOUSE_LEFT);            // Release
 
 | Name | Roll No. |
 |------|----------|
-| Mohammed Talha | UE234036 | @Drakren
+| @Drakren | UE234036 |
 | Md Sulaiman Qamar | UE234035 |
 | Utkarsh Sharma | UE234070 |
 | Anuj Gupta | UE234010 |
