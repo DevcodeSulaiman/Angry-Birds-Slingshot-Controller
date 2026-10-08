@@ -15,7 +15,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 The **Angry Birds Slingshot Controller** is a physical game controller built from simple electronics and a cardboard frame that replaces your mouse with an actual slingshot-like device. Instead of dragging your mouse to aim and release birds, you physically **pull back a trigger**, **rotate the launcher arm** to aim, and **press a button** to fire — just like a real slingshot.
 
@@ -30,7 +30,7 @@ This project was built as part of the **Summer Training 2024** program at the **
 
 ---
 
-## 🎬 Demo
+## Demo
 
 <div align="center">
 
@@ -42,20 +42,20 @@ https://github.com/user-attachments/assets/demo.mp4
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🎯 **Real slingshot mechanics** — pull, aim, and fire with physical gestures
-- 🖱️ **USB HID mouse emulation** — Arduino acts as a real mouse, no special software needed
-- 📐 **Angle control** — rotate the launcher to adjust the bird's trajectory in-game
-- 💪 **Force detection** — flex sensor detects the pull-back force for X-axis control
-- 🔘 **One-button launch** — push button triggers the bird's release with a left mouse click
-- 🧹 **Noise filtering** — moving-average filter smooths the Y-axis potentiometer readings
-- 🚀 **Threshold gating** — X-axis only activates when flex change exceeds 15 units (prevents jitter)
-- 🛠️ **DIY frame** — hand-built cardboard housing with all components integrated
+- **Real slingshot mechanics** — pull, aim, and fire with physical gestures
+- **USB HID mouse emulation** — Arduino acts as a real mouse, no special software needed
+- **Angle control** — rotate the launcher to adjust the bird's trajectory in-game
+- **Force detection** — flex sensor detects the pull-back force for X-axis control
+- **One-button launch** — push button triggers the bird's release with a left mouse click
+- **Noise filtering** — moving-average filter smooths the Y-axis potentiometer readings
+- **Threshold gating** — X-axis only activates when flex change exceeds 15 units (prevents jitter)
+- **DIY frame** — hand-built cardboard housing with all components integrated
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ```
 Physical Action         Sensor              Arduino Processing       Game Response
@@ -75,28 +75,28 @@ Press button     ──→  Push Button (D2)  ──→  Mouse.press(LEFT)   ─
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart LR
-    A["🤚 Physical Slingshot\n(Cardboard Frame)"] --> B
+    A["Physical Slingshot\n(Cardboard Frame)"] --> B
     A --> C
     A --> D
 
-    B["📏 Flex Sensor\nPin A0\n(Pull Force / X-axis)"]
-    C["🎛️ Potentiometer\nPin A1\n(Launch Angle / Y-axis)"]
-    D["🔘 Push Button\nPin D2\n(Fire Trigger)"]
+    B["Flex Sensor\nPin A0\n(Pull Force / X-axis)"]
+    C["Potentiometer\nPin A1\n(Launch Angle / Y-axis)"]
+    D["Push Button\nPin D2\n(Fire Trigger)"]
 
     B --> E
     C --> E
     D --> E
 
-    E["🧠 Arduino\n(USB HID Mouse)"]
+    E["Arduino\n(USB HID Mouse)"]
 
     E -->|"Mouse.move(x, y)"| F
     E -->|"Mouse.press(LEFT)"| F
 
-    F["💻 PC / Laptop\nAngry Birds Game"]
+    F["PC / Laptop\nAngry Birds Game"]
 
     style A fill:#8B4513,color:#fff
     style E fill:#00979D,color:#fff
@@ -105,7 +105,7 @@ flowchart LR
 
 ---
 
-## 🔧 Hardware Components
+## Hardware Components
 
 | Component | Specification | Role |
 |-----------|---------------|------|
@@ -118,11 +118,11 @@ flowchart LR
 | Connecting Wires | Male-to-male jumper wires | Wiring |
 | Cardboard Frame | DIY | Physical housing and slingshot mechanism |
 
-> ⚠️ **Important:** The `Mouse` library requires native USB HID support. A standard **Arduino Uno will NOT work**. Use an **Arduino Leonardo**, **Micro**, or **Due** instead.
+> **Important:** The `Mouse` library requires native USB HID support. A standard **Arduino Uno will NOT work**. Use an **Arduino Leonardo**, **Micro**, or **Due** instead.
 
 ---
 
-## 📌 Circuit Connections
+## Circuit Connections
 
 ```
 Arduino Pin A0 ──────────── Flex Sensor (middle) + 320Ω to GND
@@ -148,7 +148,7 @@ See the full wiring guide: [hardware/circuit/wiring-guide.md](hardware/circuit/w
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -189,7 +189,7 @@ Follow the wiring guide at [`hardware/circuit/wiring-guide.md`](hardware/circuit
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Angry-Birds-Slingshot-Controller/
@@ -218,7 +218,7 @@ Angry-Birds-Slingshot-Controller/
 
 ---
 
-## 🧠 Code Highlights
+## Code Highlights
 
 ### Flex Sensor Threshold Gating
 ```cpp
@@ -247,11 +247,11 @@ Mouse.release(MOUSE_LEFT);            // Release
 
 ---
 
-## 👨‍💻 Team
+## Team
 
 | Name | Roll No. |
 |------|----------|
-| Mohammed Talha | UE234036 |
+| Mohammed Talha | UE234036 | @Drakren
 | Md Sulaiman Qamar | UE234035 |
 | Utkarsh Sharma | UE234070 |
 | Anuj Gupta | UE234010 |
@@ -263,7 +263,7 @@ Mouse.release(MOUSE_LEFT);            // Release
 
 ---
 
-## 📚 References
+## References
 
 - [Arduino Reference](https://www.arduino.cc/reference/en/)
 - [Mouse Library — Arduino Reference](https://www.arduino.cc/reference/en/language/functions/usb/mouse/)
